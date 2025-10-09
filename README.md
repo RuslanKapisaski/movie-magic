@@ -27,7 +27,7 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 
 - [x] Add Home Controller
 - [x] Add Movie Data Layer
-- [] Add Movie Service
-- [] Render Movies On Home Page
+- [x] Add Movie Service
+- [x] Render Movies On Home Page
 - [] Show No Moivies Screen
 - [] Add routes
