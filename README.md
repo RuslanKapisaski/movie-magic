@@ -30,4 +30,11 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Add Movie Service
 - [x] Render Movies On Home Page
 - [x] Show No Movies Screen
+
+##### Create Movie
+
+- [] Add Movie Controller
 - [] Add routes
+- [] Create Movie Page
+- [] Read Body Data
+- [] Add Action For Creating Movie
