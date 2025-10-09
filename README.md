@@ -53,3 +53,7 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 ##### Movie Search
 
 - [x] Show Static Search Page
+- [x] Render All Movies
+- [] Modify Search Form
+- [] Filter Movies
+- [] Remember Search Words
