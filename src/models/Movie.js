@@ -61,8 +61,8 @@ let movies = [
   },
 ];
 
-class Movie {
-  find() {
+export default class Movie {
+  static find() {
     return movies.slice();
   }
 }
