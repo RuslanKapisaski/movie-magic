@@ -1,0 +1,19 @@
+{
+  "name": "movie-magic",
+  "version": "1.0.0",
+  "description": "Attractive and interactive platform for movie fans that offers a unique and enriching experience.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuslanKapisaski/movie-magic.git"
+  },
+  "author": "Ruslan Kapisaski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuslanKapisaski/movie-magic/issues"
+  },
+  "homepage": "https://github.com/RuslanKapisaski/movie-magic#readme"
+}
