@@ -13,9 +13,12 @@
   },
   "author": "Ruslan Kapisaski",
   "license": "ISC",
-  "type" : "module",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/RuslanKapisaski/movie-magic/issues"
   },
-  "homepage": "https://github.com/RuslanKapisaski/movie-magic#readme"
+  "homepage": "https://github.com/RuslanKapisaski/movie-magic#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
