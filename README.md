@@ -44,4 +44,7 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
   - [x] Add UUID
 - [x] Page 404
 
+##### Movie Details
 
+- [x] Add details button for detail page
+- [x] Add route with param dor details page

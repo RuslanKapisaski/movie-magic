@@ -7,9 +7,10 @@ export default {
 
 	createMovie(data) {
 		const movie = new Movie(data);
-
 		movie.save();
+	},
 
-    
+	getById(movieId) {
+		return Movie.find({ _id: movieId });
 	},
 };
