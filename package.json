@@ -4,7 +4,8 @@
   "description": "Attractive and interactive platform for movie fans that offers a unique and enriching experience.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "Ruslan Kapisaski",
   "license": "ISC",
+  "type" : "module",
   "bugs": {
     "url": "https://github.com/RuslanKapisaski/movie-magic/issues"
   },
