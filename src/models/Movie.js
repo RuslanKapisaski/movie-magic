@@ -50,7 +50,7 @@ let movies = [
 			"In a dystopian mega-city, a rogue AI forms an unlikely bond with a street artist, igniting a rebellion against a corrupt technocracy.",
 	},
 	{
-		id: 5,
+		_id: 5,
 		title: "The Last Ember",
 		genre: "Fantasy Adventure",
 		director: "Clara Jensen",
@@ -73,8 +73,18 @@ export default class Movie {
 		return this._id;
 	}
 
-	static find() {
-		return movies.slice();
+	static find(filter) {
+		let result = movies.slice();
+		return result;
+	}
+
+	static findOne(filter) {
+		let result;
+		if (filter._id) {
+			result = movies.find((movie) => movie._id === Number(filter._id));
+		}
+
+		return result;
 	}
 
 	save() {

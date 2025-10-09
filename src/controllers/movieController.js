@@ -1,5 +1,6 @@
 import { Router } from "express";
 import movieService from "../services/movieService.js";
+import Movie from "../models/Movie.js";
 
 const movieController = Router();
 
@@ -13,8 +14,8 @@ movieController.post("/movies/create", (req, res) => {
 
 movieController.get("/movies/:movieId/details", (req, res) => {
 	const movieId = req.params.movieId;
-	const movie = movieService.getById(movieId);
-	res.render("details", { movie });
+	const movie = movieService.getOneById(movieId);
+	res.render("details", movie);
 });
 
 export default movieController;

@@ -10,7 +10,7 @@ export default {
 		movie.save();
 	},
 
-	getById(movieId) {
-		return Movie.find({ _id: movieId });
+	getOneById(movieId) {
+		return Movie.findOne({ _id: movieId });
 	},
 };
