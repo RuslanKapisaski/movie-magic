@@ -34,7 +34,7 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 ##### Create Movie
 
 - [x] Add Movie Controller
-- [] Show Create Movie Page
-- [] Add routes
+- [x] Show Create Movie Page
+- [x] Add routes
 - [] Read Body Data
 - [] Add Action For Creating Movie
