@@ -36,5 +36,5 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Add Movie Controller
 - [x] Show Create Movie Page
 - [x] Add routes
-- [] Read Body Data
+- [x] Read Body Data (express.urlencoded())
 - [] Add Action For Creating Movie
