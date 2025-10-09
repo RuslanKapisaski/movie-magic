@@ -41,3 +41,4 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
   - [x] Add Action
   - [x] Add Service
   - [x] Add Model Method For Creating Movie
+  - [x] Add UUID 

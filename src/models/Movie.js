@@ -1,3 +1,5 @@
+import { v4 as uuid } from "uuid";
+
 let movies = [
 	{
 		id: 1,
@@ -67,12 +69,16 @@ export default class Movie {
 		return Object.assign(this, data);
 	}
 
+	get id() {
+		return this._id;
+	}
+
 	static find() {
 		return movies.slice();
 	}
 
 	save() {
-		this.id = movies.length + 1;
+		this._id = uuid();
 		movies.push(this);
 	}
 }

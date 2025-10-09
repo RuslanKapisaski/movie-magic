@@ -20,6 +20,7 @@
   "homepage": "https://github.com/RuslanKapisaski/movie-magic#readme",
   "dependencies": {
     "express": "^5.1.0",
-    "express-handlebars": "^8.0.1"
+    "express-handlebars": "^8.0.1",
+    "uuid": "^13.0.0"
   }
 }
