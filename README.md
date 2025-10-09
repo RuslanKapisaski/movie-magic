@@ -46,6 +46,10 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 
 ##### Movie Details
 
-- [x] Add details button for detail page
-- [x] Add route with param dor details page
-- [x] Render specific movie
+- [x] Add Details Button For Fetail Page
+- [x] Add Route With Param For Fetails Page
+- [x] Render Specific Movie
+
+##### Movie Search
+
+- [x] Show Static Search Page
