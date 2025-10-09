@@ -12,8 +12,9 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Add Dev & Start Script
 - [x] Add Express Server
 - [x] Setup Handlebars
-- [x] Add resoures
-- [x] Setup static files
-- [x] Show Home page
+- [x] Add Resoures
+- [x] Setup Static Files
+- [x] Show Home Page
 - [x] Add Debbuging
 - [x] Add Layout
+- [x] Show About Page

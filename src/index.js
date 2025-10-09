@@ -1,4 +1,4 @@
-import express from "express";
+import express, { request } from "express";
 import handlebars from "express-handlebars";
 
 const app = express();
@@ -20,6 +20,10 @@ app.use(express.static("src/public"));
 
 app.get("/", (req, res) => {
   res.render("home");
+});
+
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
 app.listen(5000, () =>
