@@ -19,7 +19,6 @@ app.set("views", "src/views");
 app.use(express.static("src/public"));
 
 app.get("/", (req, res) => {
-  res.render("test", { layout: false });
   res.render("home", { layout: false });
 });
 
