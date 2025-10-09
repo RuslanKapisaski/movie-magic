@@ -11,8 +11,15 @@ app.engine(
   })
 );
 
+//set view engine
+app.set("view engine", "hbs");
+app.set("views", "src/views");
+
+//setup middlewares
+app.use(express.static("src/public"));
+
 app.get("/", (req, res) => {
-  res.send("Works!");
+  res.render("test", { layout: false });
 });
 
 app.listen(5000, () =>
