@@ -14,3 +14,4 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Setup Handlebars
 - [x] Add resoures
 - [x] Setup static files
+- [x] Show Home page
