@@ -12,4 +12,8 @@ homeController.get("/about", (req, res) => {
 	res.render("about");
 });
 
+homeController.get("*splat", (req, res) => {
+	res.render("404");
+});
+
 export default homeController;
