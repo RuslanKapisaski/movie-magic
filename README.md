@@ -81,13 +81,18 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Add New Resources
 - [x] Install Mongoose & Connect To Database
 
-##### Refactor Movies to use mongoose
+##### Refactor Movies To Use Mongoose
 
 - [x] Add Movie Model
   - [x] Create Movie Schema
   - [x] Create Movie Model
 - [x] Refactor Movie Service
 - [x] Fix Handlebars Own Properties Issue
-- [x] Global Handle with Handlebars Protoypes
+- [x] Global Handle With Handlebars Protoypes
+
+##### Add Database Features
+
+- [x] Add Movie Persistance To Database
+  - [x] Save Movies On Create
 
 ---
