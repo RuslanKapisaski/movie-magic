@@ -102,6 +102,6 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Add Cast Controller
 - [x] Show Create Cast Page
 - [x] Add Cast Model
-- [] Add Cast Service
+- [x] Add Cast Service
 
 ---
