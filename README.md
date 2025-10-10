@@ -86,5 +86,6 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Add Movie Model
   - [x] Create Movie Schema
   - [x] Create Movie Model
+  - [x] Refactor Movie Service
 
 ---
