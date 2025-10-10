@@ -79,7 +79,12 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 ##### Setup Database
 
 - [x] Add New Resources
-- [] Install Mongoose & Connect To Database
-- []
+- [x] Install Mongoose & Connect To Database
+
+##### Refactor Movies to use mongoose
+
+- [x] Add Movie Model
+  - [x] Create Movie Schema
+  - [x] Create Movie Model
 
 ---

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import movieService from "../services/movieService.js";
-import Movie from "../models/Movie.js";
+import Movie from "../models/Movie-Old.js";
 
 const movieController = Router();
 
