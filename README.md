@@ -57,3 +57,7 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Modify Search Form
 - [x] Filter Movies
 - [x] Remember Search Words
+
+###### Bonus
+
+- [x] Show Movie Rating
