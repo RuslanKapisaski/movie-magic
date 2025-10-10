@@ -23,7 +23,7 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Add Layout
 - [x] Show About Page
 
-##### Architecture
+##### Architecture & Dynamic Rendering
 
 - [x] Add Home Controller
 - [x] Add Movie Data Layer
@@ -56,4 +56,4 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Render All Movies
 - [x] Modify Search Form
 - [x] Filter Movies
-- [] Remember Search Words
+- [x] Remember Search Words
