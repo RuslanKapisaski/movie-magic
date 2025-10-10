@@ -2,7 +2,8 @@ import Movie from "../models/Movie.js";
 
 export default {
   async getAll(filter) {
-    const result = await Movie.find(filter).lean();
+    // const result = await Movie.find(filter).lean(); => use lean to handle local with proto
+    const result = await Movie.find(filter);
     return result;
   },
 

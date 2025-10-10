@@ -88,5 +88,6 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
   - [x] Create Movie Model
 - [x] Refactor Movie Service
 - [x] Fix Handlebars Own Properties Issue
+- [x] Global Handle with Handlebars Protoypes
 
 ---
