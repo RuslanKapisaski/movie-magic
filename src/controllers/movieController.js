@@ -12,9 +12,9 @@ movieController.post("/movies/create", (req, res) => {
   res.redirect("/");
 });
 
-movieController.get("/movies/:movieId/details", (req, res) => {
+movieController.get("/movies/:movieId/details", async (req, res) => {
   const movieId = req.params.movieId;
-  const movie = movieService.getOneById(movieId);
+  const movie = await movieService.getOneById(movieId);
   const movieRationgViewData = " &#x2605".repeat(Math.trunc(movie.rating));
   res.render("details", { movie, rating: movieRationgViewData });
 });

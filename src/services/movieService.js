@@ -12,7 +12,7 @@ export default {
     movie.save();
   },
 
-  getOneById(movieId) {
-    return Movie.findOne({ _id: movieId });
+  async getOneById(movieId) {
+    return await Movie.findOne({ _id: movieId });
   },
 };
