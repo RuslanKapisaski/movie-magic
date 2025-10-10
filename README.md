@@ -89,14 +89,18 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Refactor Movie Service
 - [x] Fix Handlebars Own Properties Issue
 - [x] Global Handle With Handlebars Protoypes
-
-##### Add Database Features
-
 - [x] Add Movie Persistance To Database
   - [x] Save Movies On Create
 - [x] Refactor Search Page
   - [x]By Title
   - [x]By Genre
   - [x]By Year
+
+##### Add Cast
+
+- [x] Add Resources
+- [] Add Cast Model
+- [] Add Cast Service
+- [] Add Cast Controller
 
 ---
