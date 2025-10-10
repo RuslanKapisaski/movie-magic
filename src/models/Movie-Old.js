@@ -2,6 +2,7 @@ import { v4 as uuid } from "uuid";
 
 let movies = [
   {
+    _id: 1,
     title: "Echoes of Tomorrow",
     genre: "Science Fiction",
     director: "Lena Martinez",
@@ -13,6 +14,7 @@ let movies = [
       "In a near-future society, a brilliant quantum physicist races to stop a time anomaly that threatens to erase human history.",
   },
   {
+    _id: 2,
     title: "Shadows in the Pines",
     genre: "Thriller",
     director: "Marcus Delaney",
@@ -24,6 +26,7 @@ let movies = [
       "A retired detective is drawn back into a decades-old cold case when strange occurrences surface in a quiet mountain town.",
   },
   {
+    _id: 3,
     title: "Beneath Crimson Skies",
     genre: "Historical Drama",
     director: "Anika Chowdhury",
@@ -35,6 +38,7 @@ let movies = [
       "Set during WWII, the story follows a young resistance fighter torn between duty and love in occupied France.",
   },
   {
+    _id: 4,
     title: "Neon Reverie",
     genre: "Cyberpunk",
     director: "Takashi Morimoto",
@@ -46,6 +50,7 @@ let movies = [
       "In a dystopian mega-city, a rogue AI forms an unlikely bond with a street artist, igniting a rebellion against a corrupt technocracy.",
   },
   {
+    _id: 5,
     title: "The Last Ember",
     genre: "Fantasy Adventure",
     director: "Clara Jensen",

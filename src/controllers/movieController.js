@@ -19,10 +19,11 @@ movieController.get("/movies/:movieId/details", async (req, res) => {
   res.render("details", { movie, rating: movieRationgViewData });
 });
 
-movieController.get("/movies/search", (req, res) => {
+movieController.get("/movies/search", async (req, res) => {
   const filter = req.query;
 
-  const movies = movieService.getAll(filter);
+  const movies = await movieService.getAll(filter);
+  console.log(`movies: ${movies}`);
 
   res.render("search", { movies, filter });
 });
