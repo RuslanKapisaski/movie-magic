@@ -99,8 +99,8 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 ##### Add Cast
 
 - [x] Add Resources
-- [] Add Cast Model
+- [x] Add Cast Controller
 - [] Add Cast Service
-- [] Add Cast Controller
+- [] Add Cast Model
 
 ---
