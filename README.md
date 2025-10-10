@@ -6,7 +6,11 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 
 ---
 
+---
+
 ### Development Steps
+
+---
 
 #### 1. ExpressJS and Templating
 
@@ -61,3 +65,21 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 ###### Bonus
 
 - [x] Show Movie Rating
+
+---
+
+#### 2. MongoDB Database
+
+##### Prerequisites
+
+- [x] Install MongoDB Community Sever
+- [x] Install Compass GUI
+- [x] Install Mongosh CLI (optional)
+
+##### Setup Database
+
+- [x] Add New Resources
+- [] Install Mongoose & Connect To Database
+- []
+
+---
