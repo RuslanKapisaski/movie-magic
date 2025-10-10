@@ -12,15 +12,19 @@
   font-weight: bold;
   box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
 }
+.cast {
+  width: 560px;
+  height: 660px;
+}
 
 .noBullet textarea {
   resize: none;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .createForm,
