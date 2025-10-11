@@ -116,6 +116,6 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 ##### Show Cast Details
 
 - [x] Get Movie Casts Filtered
-- [] Show Casts On Details Page
+- [x] Show Casts On Details Page
 
 ---
