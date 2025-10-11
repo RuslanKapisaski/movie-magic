@@ -1,14 +1,20 @@
-import { Schema, model } from "mongoose";
+import { Schema, model, Types } from "mongoose";
 
 const movieSchema = new Schema({
-  title: String,
-  category: String,
-  genre: String,
-  director: String,
-  year: Number,
-  imageUrl: String,
-  rating: Number,
-  description: String,
+	title: String,
+	category: String,
+	genre: String,
+	director: String,
+	year: Number,
+	imageUrl: String,
+	rating: Number,
+	description: String,
+	cast: [
+		{
+			type: Types.ObjectId,
+			ref: "Cast",
+		},
+	],
 });
 
 //movie model

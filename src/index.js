@@ -32,6 +32,7 @@ app.engine(
 app.set("view engine", "hbs");
 app.set("views", "src/views");
 
+
 //setup middlewares
 app.use(express.static("src/public"));
 app.use(express.urlencoded());

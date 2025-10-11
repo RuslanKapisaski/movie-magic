@@ -17,7 +17,6 @@ export default {
 			//query = query.where("year").equals(filter.year); //Mongoose
 			query = query.find({ year: Number(filter.year) }); //MongoDb
 		}
-		console.log(`query: ${query}`);
 
 		return query;
 	},
