@@ -111,6 +111,6 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Add Attach Cast Button
 - [x] Add Attach Cast Page
 - [x] Add Relation Between Cast And Movie
-- [] Add Attach Cast Functionallity
+- [x] Add Attach Cast Functionallity
 
 ---

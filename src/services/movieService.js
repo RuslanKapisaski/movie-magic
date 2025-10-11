@@ -1,4 +1,5 @@
 import Movie from "../models/Movie.js";
+import { Types } from "mongoose";
 
 export default {
 	async getAll(filter = {}) {
@@ -28,5 +29,12 @@ export default {
 
 	async getOneById(movieId) {
 		return await Movie.findOne({ _id: movieId });
+	},
+
+	async attach(movieId, castId) {
+		const movie = await Movie.findById(movieId);
+		movie.casts.push(castId);
+
+		return movie.save();
 	},
 };
