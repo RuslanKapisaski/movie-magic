@@ -16,6 +16,8 @@ movieController.post("/movies/create", (req, res) => {
 movieController.get("/movies/:movieId/details", async (req, res) => {
 	const movieId = req.params.movieId;
 	const movie = await movieService.getOneById(movieId);
+	const movieCast = await castService.getAll({ includes: movie.casts });
+
 	const movieRationgViewData = " &#x2605".repeat(Math.trunc(movie.rating));
 	res.render("details", { movie, rating: movieRationgViewData });
 });

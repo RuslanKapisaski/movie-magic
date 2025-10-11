@@ -113,4 +113,9 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Add Relation Between Cast And Movie
 - [x] Add Attach Cast Functionallity
 
+##### Show Cast Details
+
+- [x] Get Movie Casts Filtered
+- [] Show Casts On Details Page
+
 ---
