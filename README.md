@@ -154,4 +154,8 @@ This project is a Movie Management Web Application built using Node.js, Express,
 - [x] Add Auth Middleware
 - [x] Validate User authentication
 
+### Movie Crud Operations
+
+- [x] Add Delete And Edit Buttons On Details Page
+
 ---
