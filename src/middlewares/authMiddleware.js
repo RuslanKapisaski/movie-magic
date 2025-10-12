@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 import { JWT_SECRET } from "../config/constants.js";
 
-function authMiddleware(req, res, next) {
+export function authMiddleware(req, res, next) {
 	const token = req.cookies["auth"];
 
 	if (!token) {
@@ -10,7 +10,11 @@ function authMiddleware(req, res, next) {
 
 	try {
 		const decodedToken = jwt.verify(token, JWT_SECRET);
+
 		//valid user
+		req.user = decodedToken;
+		req.isAuthenticated = true;
+
 		next();
 	} catch (error) {
 		//invlid user
@@ -19,4 +23,8 @@ function authMiddleware(req, res, next) {
 	}
 }
 
-export default authMiddleware;
+export function isAuth(req, res, next) {
+	if (!req.isAuthenticated) {
+		return res.render("login");
+	}
+}

@@ -152,6 +152,6 @@ This project is a Movie Management Web Application built using Node.js, Express,
 
 - [x] Install Cookie Parser
 - [x] Add Auth Middleware
-- [] Validate User authentication
+- [x] Validate User authentication
 
 ---
