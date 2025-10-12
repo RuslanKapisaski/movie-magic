@@ -118,4 +118,8 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Get Movie Casts Filtered
 - [x] Show Casts On Details Page
 
----
+#### 3, Session And Authentication
+
+##### Initial Setup
+
+- [x] Add Resources

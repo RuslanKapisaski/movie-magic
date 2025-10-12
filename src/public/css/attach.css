@@ -1,5 +1,5 @@
 .attachCastSection {
-	background-color: #dc1840;
+	background-color: #b5838d;
 	margin: auto;
 	width: 740px;
 	height: 750px;
@@ -10,9 +10,7 @@
 	font-weight: bold;
 	box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
 }
-#attachCast {
-	background-color: #dc1840;
-}
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
 	-webkit-appearance: none;
