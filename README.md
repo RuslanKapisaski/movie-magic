@@ -126,8 +126,8 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 
 ##### Registration
 
-- [] Add New Controller 'Auth Controller'
-- [] Add Registartion Page
+- [x] Add New Controller 'Auth Controller'
+- [x] Add Registartion Page
 - [] Add User Model
 - [] Add User Service
 - [] Handle Registration (Create New User In Database)
