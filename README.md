@@ -123,3 +123,14 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 ##### Initial Setup
 
 - [x] Add Resources
+
+##### Registration
+
+- [] Add New Controller 'Auth Controller'
+- [] Add Registartion Page
+- [] Add User Model
+- [] Add User Service
+- [] Handle Registration (Create New User In Database)
+  - [] Password Hashing
+
+##### Login
