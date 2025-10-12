@@ -2,7 +2,7 @@
 
 ## Description
 
-The project is called "Movie Magic". Its purpose is to create an attractive and interactive platform for movie fans that offers a unique and enriching experience. It's created gradually as you can see in different sections below.
+This project is a Movie Management Web Application built using Node.js, Express, and Handlebars, featuring secure authentication, full CRUD functionality, and persistent data storage with MongoDB. The app allows users to manage movies and their casts while ensuring strong data protection through hashing, tokens, and cookies.
 
 ---
 
