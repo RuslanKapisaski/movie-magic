@@ -1,8 +1,9 @@
 import express, { request } from "express";
 import handlebars from "express-handlebars";
+import mongoose from "mongoose";
+import cookieParser from "cookie-parser";
 
 import routes from "./routes.js";
-import mongoose from "mongoose";
 
 const app = express();
 
@@ -32,10 +33,10 @@ app.engine(
 app.set("view engine", "hbs");
 app.set("views", "src/views");
 
-
 //setup middlewares
 app.use(express.static("src/public"));
 app.use(express.urlencoded());
+app.use(cookieParser());
 
 app.use(routes);
 app.get("*splat", (req, res) => {
