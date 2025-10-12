@@ -131,6 +131,6 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Add User Model
 - [x] Add User Service
 - [x] Handle Registration (Create New User In Database)
-  - [] Password Hashing
+  - [x] Password Hashing
 
 ##### Login
