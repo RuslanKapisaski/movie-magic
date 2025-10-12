@@ -18,4 +18,10 @@ authController.get("/auth/login", (req, res) => {
 	res.render("login");
 });
 
+authController.post("/auth/login", (req, res) => {
+	const loginData = req.body;
+
+	res.redirect("/");
+});
+
 export default authController;

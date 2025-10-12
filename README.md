@@ -138,7 +138,7 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 ##### Login
 
 - [x] Add Login Page
-- [] Handle Login Page
+- [x] Handle Login Page
 - [] Validate User
   - [] Validate Email
   - [] Validate Password
