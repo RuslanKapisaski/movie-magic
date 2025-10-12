@@ -141,5 +141,11 @@ This project is a Movie Management Web Application built using Node.js, Express,
   - [x] Validate Email
   - [x] Validate Password
 - [x] Create token
+- [x] Return token to client
+
+##### Logout
+
+- [x] Add Logout Action
+- [x] Clear Cookie
 
 ---

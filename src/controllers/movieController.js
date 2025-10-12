@@ -29,7 +29,6 @@ movieController.get("/movies/search", async (req, res) => {
 	const filter = req.query;
 
 	const movies = await movieService.getAll(filter);
-	console.log(`movies: ${movies}`);
 
 	res.render("search", { movies, filter });
 });
