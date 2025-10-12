@@ -6,8 +6,6 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 
 ---
 
----
-
 ### Development Steps
 
 ---
@@ -142,6 +140,6 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Validate User
   - [x] Validate Email
   - [x] Validate Password
-- [] Create token
+- [x] Create token
 
 ---
