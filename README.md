@@ -92,9 +92,9 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Add Movie Persistance To Database
   - [x] Save Movies On Create
 - [x] Refactor Search Page
-  - [x]By Title
-  - [x]By Genre
-  - [x]By Year
+  - [x] By Title
+  - [x] By Genre
+  - [x] By Year
 
 ##### Add Cast
 
@@ -118,6 +118,8 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
 - [x] Get Movie Casts Filtered
 - [x] Show Casts On Details Page
 
+---
+
 #### 3, Session And Authentication
 
 ##### Initial Setup
@@ -134,3 +136,12 @@ The project is called "Movie Magic". Its purpose is to create an attractive and 
   - [x] Password Hashing
 
 ##### Login
+
+- [x] Add Login Page
+- [] Handle Login Page
+- [] Validate User
+  - [] Validate Email
+  - [] Validate Password
+- [] Create token
+
+---
