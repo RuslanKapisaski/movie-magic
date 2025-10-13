@@ -22,9 +22,12 @@ export default {
 		return query;
 	},
 
-	createMovie(data) {
-		const movie = new Movie(data);
-		movie.save();
+	createMovie(data, userId) {
+		return Movie.create({
+			...data,
+			rating: Number(data.rating),
+			creator: userId,
+		});
 	},
 
 	async getOneById(movieId) {
