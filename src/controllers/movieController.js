@@ -21,12 +21,15 @@ movieController.post("/movies/create", isAuth, async (req, res) => {
 movieController.get("/movies/:movieId/details", async (req, res) => {
 	const movieId = req.params.movieId;
 	const movie = await movieService.getOneById(movieId);
+	const isCreator = movie.creator?.toString() === req.user?.id ? true : false;
 	const movieCast = await castService.getAll({ includes: movie.casts });
 	const movieRationgViewData = " &#x2605".repeat(Math.trunc(movie.rating));
+
 	res.render("details", {
 		movie,
 		rating: movieRationgViewData,
 		casts: movieCast,
+		isCreator,
 	});
 });
 
