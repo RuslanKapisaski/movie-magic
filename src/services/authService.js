@@ -5,7 +5,12 @@ import { JWT_SECRET } from "../config/constants.js";
 import User from "../models/User.js";
 
 export default {
-	register(userData) {
+	async register(userData) {
+		const user = await User.exists({ email: userData.email });
+		if (user) {
+			throw new Error("User with this email already exists!");
+		}
+
 		return User.create(userData);
 	},
 

@@ -5,7 +5,7 @@ const castSchema = new Schema({
 		type: String,
 		required: [true, "Cast name is required!"],
 		minLength: [5, "Cast name should be at least 5 characters long!"],
-		match: [/^[a-zA-ZO-9 ]+$/, "Cast name has invalid characters!"],
+		match: [/^[a-zA-Z0-9 ]+$/, "Cast name has invalid characters!"],
 	},
 	age: {
 		type: Number,
