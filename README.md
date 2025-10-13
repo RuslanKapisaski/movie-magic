@@ -118,7 +118,7 @@ This project is a Movie Management Web Application built using Node.js, Express,
 
 ---
 
-#### 3, Session And Authentication
+#### 3. Session And Authentication
 
 ##### Initial Setup
 
@@ -167,6 +167,11 @@ This project is a Movie Management Web Application built using Node.js, Express,
 
 ###### Bonus
 
-- [x] Add View Data
+- [x] Add Dynamic View Data (on select)
+
+---
+
+#### 4. Validation And Error Handling
+
 
 ---

@@ -14,7 +14,8 @@
 	font-size: 4rem;
 	text-transform: capitalize;
 	font-family: Georgia, serif;
-	color: black;
+	color: white;
+	text-shadow: 1px 10px 10px rgb(252, 252, 252);
 	font-weight: bold;
 	font-family: Ubuntu, sans-serif !important;
 }
@@ -34,8 +35,8 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	box-shadow: 0 0px 81px #5b848a;
-	background-color: #6d6875;
+	box-shadow: 0 10px 81px #ffffff;
+	background-color: #1d1b24;
 	padding-top: 20px;
 	padding-bottom: 20px;
 	margin-left: 1.5em;
@@ -110,14 +111,14 @@
 	height: 450px;
 	width: 350px;
 	padding: 1em 1em;
-	background: #ffb4a2;
+	background: #cbc2c0;
 	border-radius: 10px;
 }
 
 .flip > .back > h2 {
 	font-size: 1.5rem;
 	padding-top: 5px;
-	color: grey;
+	color: rgb(248, 244, 244);
 }
 
 .flip > .back > p {
