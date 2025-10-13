@@ -59,9 +59,16 @@ movieController.post("/movies/:movieId/attach", isAuth, async (req, res) => {
 
 movieController.get("/movies/:movieId/edit", async (req, res) => {
 	const movie = await movieService.getOneById(req.params.movieId);
-	console.log(movie);
-
 	res.render("edit", { movie });
 });
 
+movieController.post("/movies/:movieId/edit", async (req, res) => {
+	const movieData = req.body;
+	const movieId = req.params.movieId;
+	console.log(movieId);
+
+	await movieService.edit(movieId, movieData);
+
+	res.redirect(`/movies/${movieId}/details`);
+});
 export default movieController;

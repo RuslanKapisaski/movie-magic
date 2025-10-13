@@ -40,4 +40,8 @@ export default {
 
 		return movie.save();
 	},
+
+	edit(movieID, movieData) {
+		return Movie.findByIdAndUpdate(movieID, movieData);
+	},
 };
