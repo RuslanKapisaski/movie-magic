@@ -160,5 +160,7 @@ This project is a Movie Management Web Application built using Node.js, Express,
 - [x] Add Delete And Edit Buttons On Details Page
 - [x] Add Creater As Relation In Movies
 - [x] Show Buttons Only To Creator
+- [x] Show Edit Page
+  - [x] Populate Movie Data
 
 ---
