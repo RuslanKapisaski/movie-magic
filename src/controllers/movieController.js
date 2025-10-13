@@ -24,7 +24,6 @@ movieController.get("/movies/:movieId/details", async (req, res) => {
 	const isCreator = movie.creator?.toString() === req.user?.id ? true : false;
 	const movieCast = await castService.getAll({ includes: movie.casts });
 	const movieRationgViewData = " &#x2605".repeat(Math.trunc(movie.rating));
-
 	res.render("details", {
 		movie,
 		rating: movieRationgViewData,
@@ -59,7 +58,10 @@ movieController.post("/movies/:movieId/attach", isAuth, async (req, res) => {
 
 movieController.get("/movies/:movieId/edit", async (req, res) => {
 	const movie = await movieService.getOneById(req.params.movieId);
-	res.render("edit", { movie });
+
+	const movieCategories = getMovieCategory(movie.category);
+
+	res.render("edit", { movie, categories: movieCategories });
 });
 
 movieController.post("/movies/:movieId/edit", async (req, res) => {
@@ -77,4 +79,21 @@ movieController.get("/movies/:movieId/delete", async (req, res) => {
 	await movieService.delete(movieId);
 	res.redirect("/");
 });
+
+function getMovieCategory(selectedCategory) {
+	const movieCategories = [
+		{ value: "tv-show", label: "TV Show" },
+		{ value: "animation", label: "Animation" },
+		{ value: "movie", label: "Movie" },
+		{ value: "documentary", label: "Documentary" },
+		{ value: "short-film", label: "Short Film" },
+	];
+
+	const viewData = movieCategories.map((category) => ({
+		...category,
+		selected: selectedCategory === category.value ? "selected" : " ",
+	}));
+
+	return viewData;
+}
 export default movieController;
