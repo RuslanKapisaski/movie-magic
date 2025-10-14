@@ -173,10 +173,17 @@ This project is a Movie Management Web Application built using Node.js, Express,
 
 #### 4. Validation And Error Handling
 
+##### Validation
+
 - [x] Movie Validation
 - [x] Cast Validation
 - [x] User Validation
+
   - [x] User Email
   - [x] User Password
+
+  ##### Error Handling
+
+  - [x] Add notification container
 
 ---
