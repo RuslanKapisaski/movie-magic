@@ -11,7 +11,9 @@ const userSchema = new Schema({
 	},
 	password: {
 		type: String,
-		required: [true, "User Passord is required!"],
+		required: [true, "User passord is required!"],
+		minLength: [6, "Password should be at least 6 chatacters long!"],
+		match: [[/^[a-zA-Z0-9]$/], "Please use only english letters!"],
 	},
 });
 

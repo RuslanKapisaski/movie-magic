@@ -177,6 +177,6 @@ This project is a Movie Management Web Application built using Node.js, Express,
 - [x] Cast Validation
 - [x] User Validation
   - [x] User Email
-  - [] User Password
+  - [x] User Password
 
 ---

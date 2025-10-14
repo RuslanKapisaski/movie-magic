@@ -11,7 +11,10 @@ export default {
 		if (user) {
 			throw new Error("User with this email already exists!");
 		}
-
+		//re-pass validation
+		if (userData.password !== userData.rePassword) {
+			throw new Error("Password missmatch!");
+		}
 		return User.create(userData);
 	},
 
