@@ -13,9 +13,9 @@ export default {
 		}
 		//re-pass validation
 		if (userData.password !== userData.rePassword) {
-			throw new Error("Password missmatch!");
+			throw new Error("Password missmatch!")
 		}
-		return User.create(userData);
+			return User.create(userData);
 	},
 
 	async login(email, password) {

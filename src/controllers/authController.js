@@ -1,5 +1,5 @@
 import { Router } from "express";
-import userService from "../services/authService.js";
+import authService from "../services/authService.js";
 
 const authController = Router();
 
@@ -9,9 +9,16 @@ authController.get("/auth/register", (req, res) => {
 
 authController.post("/auth/register", async (req, res) => {
 	const userData = req.body;
-	await userService.register(userData);
+	console.log(userData);
 
-	res.redirect("/auth/login");
+	try {
+		await authService.register(userData);
+		res.redirect("/");
+	} catch (err) {
+		res
+			.status(400)
+			.render("register", { error: err.message, email: userData.email });
+	}
 });
 
 authController.get("/auth/login", (req, res) => {
@@ -21,7 +28,7 @@ authController.get("/auth/login", (req, res) => {
 authController.post("/auth/login", async (req, res) => {
 	const { email, password } = req.body;
 
-	const token = await userService.login(email, password);
+	const token = await authService.login(email, password);
 
 	res.cookie("auth", token);
 

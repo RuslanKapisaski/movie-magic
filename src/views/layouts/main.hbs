@@ -30,9 +30,12 @@
 			</nav>
 
 			<main>
-				<div class="error-container">
-					<p>Error:</p>
-				</div>
+				{{#if error}}
+					<div class="error-container">
+						<p>{{error}}</p>
+					</div>
+				{{/if}}
+
 				{{{body}}}
 			</main>
 
