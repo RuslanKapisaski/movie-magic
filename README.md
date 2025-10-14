@@ -186,5 +186,6 @@ This project is a Movie Management Web Application built using Node.js, Express,
 
   - [x] Add Notification Container
   - [x] Add User Registartion Handling
+  - [x] Add User Login Handling
 
 ---
