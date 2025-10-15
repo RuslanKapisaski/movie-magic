@@ -15,7 +15,11 @@ movieController.post("/movies/create", isAuth, async (req, res) => {
 	const movieData = req.body;
 	const userId = req.user.id;
 	try {
-		await movieService.createMovie(movieData, userId);
+		await movieService.createMovie({
+			movieData,
+			userId,
+			categories: getMovieCategory(),
+		});
 		res.redirect("/");
 	} catch (error) {
 		const errorMessage = getErrorMessage(error);
