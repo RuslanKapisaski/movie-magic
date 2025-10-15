@@ -189,6 +189,6 @@ This project is a Movie Management Web Application built using Node.js, Express,
   - [x] Add User Login Handling
   - [x] Add error handling on creating movies
     - [x] Retain movie category after error
-  - [] Add error handling on creating casts
+  - [x] Add error handling on creating casts
 
 ---
