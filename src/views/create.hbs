@@ -15,23 +15,27 @@
 						class="inputFields"
 						id="title"
 						name="title"
-						value=""
+						value="{{movie.title}}"
 					/>
 				</li>
 				<li>
 					<label for="category">Category:</label>
 					<select id="category" class="inputFields" name="category">
 						<option value="">Select Category</option>
-						<option value="tv-show">TV Show</option>
-						<option value="animation">Animation</option>
-						<option value="movie">Movie</option>
-						<option value="documentary">Documentary</option>
-						<option value="short-film">Short Film</option>
+						{{#each categories}}
+							<option value="{{value}}" {{selected}}>{{label}}</option>
+						{{/each}}
 					</select>
 				</li>
 				<li>
 					<label for="genre">Genre:</label>
-					<input type="text" class="inputFields" id="genre" name="genre" />
+					<input
+						type="text"
+						class="inputFields"
+						id="genre"
+						name="genre"
+						value="{{movie.genre}}"
+					/>
 				</li>
 				<li>
 					<label for="director">Director:</label>
@@ -40,19 +44,38 @@
 						class="inputFields"
 						id="director"
 						name="director"
+						value="{{movie.director}}"
 					/>
 				</li>
 				<li>
 					<label for="date">Year:</label>
-					<input type="number" class="inputFields" id="year" name="date" />
+					<input
+						type="number"
+						class="inputFields"
+						id="year"
+						name="date"
+						value="{{movie.year}}"
+					/>
 				</li>
 				<li>
 					<label for="imageUrl">Movie Poster:</label>
-					<input type="text" class="inputFields" id="image" name="imageUrl" />
+					<input
+						type="text"
+						class="inputFields"
+						id="image"
+						name="imageUrl"
+						value="{{movie.imageUrl}}"
+					/>
 				</li>
 				<li>
 					<label for="rating">Rating:</label>
-					<input type="text" class="inputFields" id="rating" name="rating" />
+					<input
+						type="text"
+						class="inputFields"
+						id="rating"
+						name="rating"
+						value="{{movie.rating}}"
+					/>
 				</li>
 				<li>
 					<label for="description">Description:</label>
@@ -60,6 +83,7 @@
 						id="description"
 						class="inputFields"
 						name="description"
+						value="{{movie.description}}"
 					></textarea>
 				</li>
 
