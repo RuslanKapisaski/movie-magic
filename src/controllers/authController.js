@@ -10,7 +10,6 @@ authController.get("/auth/register", (req, res) => {
 
 authController.post("/auth/register", async (req, res) => {
 	const userData = req.body;
-	console.log(userData);
 
 	try {
 		await authService.register(userData);

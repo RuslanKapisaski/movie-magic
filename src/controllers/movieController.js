@@ -41,6 +41,8 @@ movieController.get("/movies/:movieId/details", async (req, res) => {
 		const isCreator = movie.creator?.toString() === req.user?.id ? true : false;
 		const movieCast = await castService.getAll({ includes: movie.casts });
 		const movieRationgViewData = " &#x2605".repeat(Math.trunc(movie.rating));
+		console.log(movieCast);
+
 		res.render("details", {
 			movie,
 			rating: movieRationgViewData,
@@ -64,20 +66,21 @@ movieController.get("/movies/search", async (req, res) => {
 movieController.get("/movies/:movieId/attach", async (req, res) => {
 	const movieId = req.params.movieId;
 	const movie = await movieService.getOneById(movieId);
-	const cast = await castService.getAll();
-	res.render("casts/attach", { movie, cast });
+	const casts = await castService.getAll();
+	res.render("casts/attach", { movie, casts });
 });
 
 movieController.post("/movies/:movieId/attach", isAuth, async (req, res) => {
 	const castId = req.body.cast;
 	const movieId = req.params.movieId;
 	try {
-		await movieService.attach(movieId, castId);
-		res.redirect(`/movies/${movieId}/details`);
+		movieService.attach(movieId, castId);
+		return res.redirect(`/movies/${movieId}/details`);
 	} catch (err) {
 		const error = getErrorMessage(err);
-
-		res.status(400).render("casts/attach", { error });
+		const casts = await castService.getAll();
+		const movie = await movieService.getOneById(movieId);
+		res.status(400).render("casts/attach", { error, movie, casts });
 	}
 });
 

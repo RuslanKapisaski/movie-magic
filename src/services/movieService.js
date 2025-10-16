@@ -36,9 +36,14 @@ export default {
 
 	async attach(movieId, castId) {
 		const movie = await Movie.findById(movieId);
+
 		movie.casts.push(castId);
 
-		return movie.save();
+		const result = await Movie.updateOne(
+			{ _id: movieId },
+			{ $addToSet: { casts: castId } }
+		);
+		return result;
 	},
 
 	edit(movieID, movieData) {

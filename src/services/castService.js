@@ -7,7 +7,7 @@ export default {
 	getAll(filter = {}) {
 		let query = Cast.find();
 		if (filter.includes) {
-			query = query.in("_id", filter.includes);
+			query = query.where("_id").in(filter.includes);
 		}
 
 		return query;
