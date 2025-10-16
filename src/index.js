@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 
 import routes from "./routes.js";
 import { authMiddleware } from "./middlewares/authMiddleware.js";
+// import { isMovieCreator } from "./middlewares/movieMiddleware.js";
 
 const app = express();
 
@@ -39,6 +40,7 @@ app.use(express.static("src/public"));
 app.use(express.urlencoded());
 app.use(cookieParser());
 app.use(authMiddleware);
+// app.use(isMovieCreator);
 
 app.use(routes);
 app.get("*splat", (req, res) => {

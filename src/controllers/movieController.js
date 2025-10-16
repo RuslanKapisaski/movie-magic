@@ -4,6 +4,7 @@ import { isAuth } from "../middlewares/authMiddleware.js";
 import movieService from "../services/movieService.js";
 import castService from "../services/castService.js";
 import { getErrorMessage } from "../utils/errorUtils.js";
+import { isMovieCreator } from "../middlewares/movieMiddleware.js";
 
 const movieController = Router();
 
@@ -84,13 +85,18 @@ movieController.post("/movies/:movieId/attach", isAuth, async (req, res) => {
 	}
 });
 
-movieController.get("/movies/:movieId/edit", async (req, res) => {
-	const movie = await movieService.getOneById(req.params.movieId);
+movieController.get(
+	"/movies/:movieId/edit",
+	isAuth,
+	isMovieCreator,
+	async (req, res) => {
+		const movie = req.movie;
 
-	const movieCategories = getMovieCategory(movie.category);
+		const movieCategories = getMovieCategory(movie.category);
 
-	res.render("edit", { movie, categories: movieCategories });
-});
+		res.render("edit", { movie, categories: movieCategories });
+	}
+);
 
 movieController.post("/movies/:movieId/edit", async (req, res) => {
 	const movieData = req.body;
