@@ -24,7 +24,6 @@ movieController.post("/movies/create", isAuth, async (req, res) => {
 	} catch (error) {
 		const errorMessage = getErrorMessage(error);
 		const categoriesViewData = getMovieCategory(movieData.category);
-		console.log(categoriesViewData);
 
 		res.status(400).render("create", {
 			error: errorMessage,
@@ -38,7 +37,6 @@ movieController.get("/movies/:movieId/details", async (req, res) => {
 	const movieId = req.params.movieId;
 	try {
 		const movie = await movieService.getOneById(movieId);
-		console.log(movie);
 
 		const isCreator = movie.creator?.toString() === req.user?.id ? true : false;
 		const movieCast = await castService.getAll({ includes: movie.casts });
