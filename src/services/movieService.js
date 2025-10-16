@@ -42,7 +42,7 @@ export default {
 	},
 
 	edit(movieID, movieData) {
-		return Movie.findByIdAndUpdate(movieID, movieData);
+		return Movie.findByIdAndUpdate(movieID, movieData, { runValidators: true });
 	},
 
 	delete(movieID) {

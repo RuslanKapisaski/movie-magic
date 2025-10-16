@@ -46,7 +46,7 @@ const movieSchema = new Schema({
 	description: {
 		type: String,
 		minLength: [20, "Description should be at least 20 characters long!"],
-		match: [/^[a-zA-Z0-9 ]+$/, "Description has invalid characters"],
+		match: [/^[a-zA-Z0-9\s\S]+$/, "Description has invalid characters"],
 	},
 	casts: [
 		{

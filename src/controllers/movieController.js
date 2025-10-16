@@ -36,16 +36,23 @@ movieController.post("/movies/create", isAuth, async (req, res) => {
 
 movieController.get("/movies/:movieId/details", async (req, res) => {
 	const movieId = req.params.movieId;
-	const movie = await movieService.getOneById(movieId);
-	const isCreator = movie.creator?.toString() === req.user?.id ? true : false;
-	const movieCast = await castService.getAll({ includes: movie.casts });
-	const movieRationgViewData = " &#x2605".repeat(Math.trunc(movie.rating));
-	res.render("details", {
-		movie,
-		rating: movieRationgViewData,
-		casts: movieCast,
-		isCreator,
-	});
+	try {
+		const movie = await movieService.getOneById(movieId);
+		console.log(movie);
+
+		const isCreator = movie.creator?.toString() === req.user?.id ? true : false;
+		const movieCast = await castService.getAll({ includes: movie.casts });
+		const movieRationgViewData = " &#x2605".repeat(Math.trunc(movie.rating));
+		res.render("details", {
+			movie,
+			rating: movieRationgViewData,
+			casts: movieCast,
+			isCreator,
+			isAuthendticated: req.isAuthendticated,
+		});
+	} catch {
+		res.redirect("/404");
+	}
 });
 
 movieController.get("/movies/search", async (req, res) => {
@@ -56,7 +63,7 @@ movieController.get("/movies/search", async (req, res) => {
 	res.render("search", { movies, filter });
 });
 
-movieController.get("/movies/:movieId/attach", isAuth, async (req, res) => {
+movieController.get("/movies/:movieId/attach", async (req, res) => {
 	const movieId = req.params.movieId;
 	const movie = await movieService.getOneById(movieId);
 	const cast = await castService.getAll();
@@ -66,10 +73,14 @@ movieController.get("/movies/:movieId/attach", isAuth, async (req, res) => {
 movieController.post("/movies/:movieId/attach", isAuth, async (req, res) => {
 	const castId = req.body.cast;
 	const movieId = req.params.movieId;
+	try {
+		await movieService.attach(movieId, castId);
+		res.redirect(`/movies/${movieId}/details`);
+	} catch (err) {
+		const error = getErrorMessage(err);
 
-	await movieService.attach(movieId, castId);
-
-	res.redirect(`/movies/${movieId}/details`);
+		res.status(400).render("casts/attach", { error });
+	}
 });
 
 movieController.get("/movies/:movieId/edit", async (req, res) => {
@@ -83,11 +94,18 @@ movieController.get("/movies/:movieId/edit", async (req, res) => {
 movieController.post("/movies/:movieId/edit", async (req, res) => {
 	const movieData = req.body;
 	const movieId = req.params.movieId;
-	console.log(movieId);
+	try {
+		await movieService.edit(movieId, movieData);
+		res.redirect(`/movies/${movieId}/details`);
+	} catch (err) {
+		const errorMessage = getErrorMessage(err);
 
-	await movieService.edit(movieId, movieData);
-
-	res.redirect(`/movies/${movieId}/details`);
+		res.status(400).render(`edit`, {
+			movie: movieData,
+			categories: getMovieCategory(),
+			error: errorMessage,
+		});
+	}
 });
 
 movieController.get("/movies/:movieId/delete", async (req, res) => {
