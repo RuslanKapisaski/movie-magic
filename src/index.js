@@ -28,6 +28,11 @@ app.engine(
 			allowProtoPropertiesByDefault: true,
 			allowProtoMethodsByDefault: true,
 		},
+		helpers: {
+			setTitle(title) {
+				this.pageTitle = title;
+			},
+		},
 	})
 );
 

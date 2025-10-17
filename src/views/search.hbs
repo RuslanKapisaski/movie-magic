@@ -1,55 +1,57 @@
+{{setTitle "Search Movies"}}
+
 <section id="search">
-  <h1>Search</h1>
-  <form method="get" class="form">
-    <input
-      type="text"
-      class="search"
-      name="title"
-      placeholder="Title..."
-      value="{{movie.title}}"
-    />
-    <input
-      type="text"
-      name="genre"
-      class="genre"
-      placeholder="Genre..."
-      value="{{movie.genre}}"
-    />
-    <input
-      type="number"
-      name="year"
-      class="year"
-      placeholder="Year..."
-      value="{{movie.year}}"
-    />
-    <input type="submit" value="search" />
-  </form>
+	<h1>Search</h1>
+	<form method="get" class="form">
+		<input
+			type="text"
+			class="search"
+			name="title"
+			placeholder="Title..."
+			value="{{movie.title}}"
+		/>
+		<input
+			type="text"
+			name="genre"
+			class="genre"
+			placeholder="Genre..."
+			value="{{movie.genre}}"
+		/>
+		<input
+			type="number"
+			name="year"
+			class="year"
+			placeholder="Year..."
+			value="{{movie.year}}"
+		/>
+		<input type="submit" value="search" />
+	</form>
 </section>
 
 <section id="catalog">
-  <div class="band">
-    <!-- If there are posts for movie in the database display each of them -->
-    {{#if movies}}
-      {{#each movies}}
-        <div class="flip flip-vertical">
-          <div class="front">
-            <img src="{{imageUrl}}" alt="{{title}}" />
-          </div>
-          <div class="back">
-            <h1>{{title}}</h1>
-            <h2>Genre: {{genre}}</h2>
-            <p>Description:
-              {{description}}
-            </p>
-            <a href="/movies/{{_id}}/details" class="details">Details</a>
-          </div>
-        </div>
-      {{/each}}
-    {{else}}
-      <!-- If there are no posts matched display: -->
-      <div class="no-posts">
-        <p class="no-offer">There are no movies matched...</p>
-      </div>
-    {{/if}}
-  </div>
+	<div class="band">
+		<!-- If there are posts for movie in the database display each of them -->
+		{{#if movies}}
+			{{#each movies}}
+				<div class="flip flip-vertical">
+					<div class="front">
+						<img src="{{imageUrl}}" alt="{{title}}" />
+					</div>
+					<div class="back">
+						<h1>{{title}}</h1>
+						<h2>Genre: {{genre}}</h2>
+						<p>Description:
+							{{description}}
+						</p>
+						<a href="/movies/{{_id}}/details" class="details">Details</a>
+					</div>
+				</div>
+			{{/each}}
+		{{else}}
+			<!-- If there are no posts matched display: -->
+			<div class="no-posts">
+				<p class="no-offer">There are no movies matched...</p>
+			</div>
+		{{/if}}
+	</div>
 </section>

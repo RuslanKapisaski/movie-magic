@@ -42,7 +42,6 @@ movieController.get("/movies/:movieId/details", async (req, res) => {
 		const isCreator = movie.creator?.toString() === req.user?.id ? true : false;
 		const movieCast = await castService.getAll({ includes: movie.casts });
 		const movieRationgViewData = " &#x2605".repeat(Math.trunc(movie.rating));
-		console.log(movieCast);
 
 		res.render("details", {
 			movie,
