@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a Movie Management Web Application built using Node.js, Express, and Handlebars, featuring secure authentication, full CRUD functionality, and persistent data storage with MongoDB. The app allows users to manage movies and their casts while ensuring strong data protection through hashing, tokens, and cookies.
+Movie Magic is a Multipage Page Application (MPA) built using Node.js, Express, and Handlebars, featuring secure authentication, full CRUD functionality, and persistent data storage with MongoDB. The app allows users to manage movies and their casts while ensuring strong data protection through hashing, tokens, and cookies.
 
 ---
 

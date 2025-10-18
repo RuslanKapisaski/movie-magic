@@ -29,19 +29,19 @@ const movieSchema = new Schema({
 	},
 	year: {
 		type: Number,
-		require: [true, "Year is required!"],
+		required: [true, "Year is required!"],
 		min: [1900, "Year should be greater than 1900!"],
 		max: [2024, "Year should be less than 2024!"],
 	},
 	imageUrl: {
 		type: String,
-		required: [true, "Movie image is required!"],
 		match: [/^https?:\/\//, "Image url is invalid format!"],
+		required: [true, "Movie image is required!"],
 	},
 	rating: {
 		type: Number,
 		min: [1, "Rating should be greater or equal to 1!"],
-		max: [5, "Rating should be less or equal to 5!"],
+		max: [10, "Rating should be less or equal to 10!"],
 	},
 	description: {
 		type: String,

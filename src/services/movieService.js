@@ -25,8 +25,7 @@ export default {
 	createMovie(data, userId) {
 		return Movie.create({
 			...data,
-			rating: Number(data.rating),
-			creator: userId,
+			creator: new Types.ObjectId(data.userId),
 		});
 	},
 

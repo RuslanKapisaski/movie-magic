@@ -9,18 +9,26 @@ import { isMovieCreator } from "../middlewares/movieMiddleware.js";
 const movieController = Router();
 
 movieController.get("/movies/create", isAuth, (req, res) => {
-	res.render("create");
+	const categories = getMovieCategory();
+
+	res.render("create", { movie: req.body, categories });
 });
 
 movieController.post("/movies/create", isAuth, async (req, res) => {
-	const movieData = req.body;
 	const userId = req.user.id;
+	const movieData = {
+		...req.body,
+		imageUrl: req.body.imageUrl.trim(),
+		year: Number(req.body.date),
+		rating: req.body.rating ? Number(req.body.rating) : undefined,
+	};
+
 	try {
 		await movieService.createMovie({
-			movieData,
+			...movieData,
 			userId,
-			categories: getMovieCategory(),
 		});
+
 		res.redirect("/");
 	} catch (error) {
 		const errorMessage = getErrorMessage(error);
