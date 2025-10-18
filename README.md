@@ -187,13 +187,17 @@ Movie Magic is a Multipage Page Application (MPA) built using Node.js, Express, 
   - [x] Add Notification Container
   - [x] Add User Registartion Handling
   - [x] Add User Login Handling
-  - [x] Add error handling on creating movies
-    - [x] Retain movie category after error
-  - [x] Add error handling on creating casts
-  - [x] Add details page error handling
+  - [x] Add Error Handling On Creating Movies
+    - [x] Retain Movie Category After Error
+  - [x] Add Error Handling On Creating Casts
+  - [x] Add Details Page Error Handling
 
 ##### Bonuses
 
-- [x] Guard edit from non creator
+- [x] Guard Edit From Non Creator
+- [x] Dynamic Page Titles
+- [x] Redirect With Message
+  - [x] Install Express-Session
+  - [x] Add Temp Data Middleware
 
 ---

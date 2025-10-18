@@ -59,6 +59,11 @@ movieController.get("/movies/:movieId/details", async (req, res) => {
 			isAuthendticated: req.isAuthendticated,
 		});
 	} catch {
+		//1.Redirect without message
+		//res.redirect("/404");
+
+		//2. Redirect with message
+		req.tempData = { error: "Movie not found" };
 		res.redirect("/404");
 	}
 });
